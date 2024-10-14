@@ -14,11 +14,11 @@
 
 * {
     box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
+    
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 
 nav {
@@ -118,77 +118,53 @@ nav {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Media Queries */
-@media (max-width: 768px) {
-    .hamburger {
-        display: flex;
-    }
-
-    .nav-links {
-        display: none;
-        flex-direction: column;
-        position: fixed;
-        top: 0;
-        left: -250px;
-        width: 250px;
-        height: 100%;
-        background-color: #333;
-        padding-top: 60px;
-    }
-
-    .nav-links.active {
-        left: 0;
-    }
-
-    .nav-links li {
-        margin: 10px 0;
-    }
-
-    .nav-links a {
-        color: #fff;
-    }
-
-    .right-icons {
-        display: flex;
-    }
+.announcement-bar {
+    background-color: #f9f0ec;
+    text-align: center;
+    padding: 10px;
+    font-size: 16px;
 }
 
-@media (max-width: 480px) {
-    nav {
-        justify-content: center;
-    }
+#countdown {
+    font-weight: bold;
+    color: #000;
+}
 
-    .logo {
-        flex-grow: 0;
-    }
-
+@media only screen and (max-width: 768px) {
     .logo img {
-        height: 80px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        align-self: center;
+        height: 80px; 
+        width: auto;
     }
 
-    .right-icons {
-        display: flex;
-        justify-content: end;
-        width: 100%;
+    
+    nav {
+        flex-direction: row;
+    }
+
+    .container {
+        grid-template-columns: 1fr; 
     }
 
     .right-icons i {
         font-size: 20px;
-        margin-left: 10px;
+        
     }
 }
 
-/*
-@media (min-device-width: 320px) {
+
+@media only screen and (max-width: 480px) {
     .logo img {
-        height: 80px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        align-self: center;
+        height: 60px; 
+        width: auto;
     }
-}*test/
+
+    .hamburger {
+        left: 0; 
+    }
+
+    
+    .right-icons i {
+        font-size: 18px;
+        
+    }
+}
